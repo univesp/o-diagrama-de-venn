@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="Você já ouviu falar sobre o Diagrama de Venn? Este recurso permite conhecê-lo e compreender como utilizá-lo na resolução de problemas matemáticos! Além disso, o recurso permite que o usuário faça o seu próprio Diagrama de Venn com dois ou três conjuntos. Confira!">
+
+  <title>Univesp | O Diagrama de Venn</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <!--///////////////////////////////////////////////////////////////
+  Classe para nav
+  - padrão => header estático
+  - class="header-dinamico" => header possui posição fixa e é mostrado apenas quando a página está no topo (necessário ajustar padding ou margin superior e inferior do main).
+  //////////////////////////////////////////////////////////////////-->
+  <!-- <nav class="header-dinamico"> -->
+  <nav>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/colorida-positiva.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp, sendo a letra V estilizada.">
+          <!-- outras opções de img src: colorida-negativa.svg, traco-positiva.svg, traco-negativa.svg -->
+        </a>
+      </div>
+      <!-- Compartilhamento -->
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+    <div class="container" align="center">
+      <div class="row">
+        <div class="col-12 col-lg-5" style="display: flex;
+    justify-content: center;
+    align-items: center;">
+          <h1 class="titulo">O DIAGRAMA DE VENN</h1>
+        </div>
+        <div class="col-12 col-lg-7 no-print">
+          <img class="intro" src="assets/intro.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container no-print">
+      <div class="row">
+        <div class="col-12" align="center" style="padding-bottom: 2%; padding-top: 2%;">
+          <div class="instrucoes no-print" style="position: relative;">
+            <img src="assets/fita.png" class="imagem2">
+            <div class="instrucao_fita">
+              <p style="margin-bottom: 0;">O Diagrama de Venn tem esse nome em homenagem ao matemático John Venn que o criou no século XIX. Trata-se de uma ferramenta muito útil para representar relações entre conjuntos (união e interseção), bem como para resolver alguns problemas de probabilidade e estatística e até mesmo de lógica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container no-print">
+      <div class="row justify-content-center">
+        <div class="opcao col-sm-3"><a class="ancora" href="#conteudo1">Explicando o diagrama: Um pouco mais sobre o Diagrama de Venn</a></div>
+        <div class="opcao col-sm-3" style="padding-left: 10px; padding-right: 10px;"><a class="ancora" href="#conteudo2">O Diagrama de Venn para resolver problemas</a></div>
+        <div class="opcao col-sm-3"><a class="ancora" href="#conteudo3" style="padding-left: 22px; padding-right: 22px;">Faça o seu próprio Diagrama de Venn</a></div>
+        <div class="opcao col-sm-3"><a class="ancora" href="#conteudo4">Curiosidade: Como seria um Diagrama de Venn com 5 conjuntos?</a></div>
+      </div>
+    </div>
+  </section>
+  <section id="conteudo1">
+    <div class="container-fluid no-print" style="margin-top: 2%; margin-bottom: 3%;">
+      <div class="hr-middle">
+        <div class="quadrado">EXPLICANDO O DIAGRAMA</div>
+      </div>
+    </div>
+    <div class="container no-print">
+      <div class="row">
+        <div class="col-12">
+          <p>O diagrama utiliza círculos sobrepostos que permitem ilustrar as relações entre conjuntos. Veja a seguir.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="col-12" align="center">
+            <div class="carousel2">
+              <div class="carousel-inner2">
+                  <input class="carousel-open" type="radio" id="carousel-1" name="carousel2" aria-hidden="true" hidden="" checked="checked">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-2" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02b.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-3" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02c.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-4" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02d.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-5" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02e.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-6" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02f.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-7" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02g.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-8" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02h.png">
+                  </div>
+                  <input class="carousel-open" type="radio" id="carousel-9" name="carousel2" aria-hidden="true" hidden="">
+                  <div class="carousel-item2">
+                      <img src="assets/arte02i.png">
+                  </div>                  
+                  <label for="carousel-1" class="carousel-control prev control-2"><i id="10" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-2" class="carousel-control prev control-3"><i id="11" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-3" class="carousel-control prev control-4"><i id="12" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-4" class="carousel-control prev control-5"><i id="13" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-5" class="carousel-control prev control-6"><i id="14" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-6" class="carousel-control prev control-7"><i id="15" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-7" class="carousel-control prev control-8"><i id="16" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  <label for="carousel-8" class="carousel-control prev control-9"><i id="17" style="font-size: 32px;" class="material-icons voltar">chevron_left</i></label>
+                  
+
+                  <label for="carousel-1" class="carousel-control next"><i id="0" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-2" class="carousel-control next control-1"><i id="1" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-3" class="carousel-control next control-2"><i id="2" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-4" class="carousel-control next control-3"><i id="3" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-5" class="carousel-control next control-4"><i id="4" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-6" class="carousel-control next control-5"><i id="5" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-7" class="carousel-control next control-6"><i id="6" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-8" class="carousel-control next control-7"><i id="7" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  <label for="carousel-9" class="carousel-control next control-8"><i id="8" style="font-size: 32px;" class="material-icons avancar">chevron_right</i></label>
+                  
+              </div>
+          </div>
+          </div>
+        </div>
+      <div class="row justify-content-center" style="padding-top: 2%;">
+        <div class="col-12" align="center">
+          <p class="definicao elementos_relacionados0">Conjunto dos elementos que pertencem <strong>apenas a A</strong>.</p>
+          <p class="definicao elementos_relacionados1" style="display: none;">Conjunto dos elementos que pertencem <strong>apenas a B</strong>.</p>
+          <p class="definicao elementos_relacionados2" style="display: none;">Conjunto dos elementos que pertencem <strong>apenas a C</strong>.</p>
+          <p class="definicao elementos_relacionados3" style="display: none;">Conjunto dos elementos que, simultaneamente, pertencem a <strong>A e a B</strong>, mas não pertencem a <strong>C</strong>.</p>
+          <p class="definicao elementos_relacionados4" style="display: none;">Conjunto dos elementos que, simultaneamente, pertencem a <strong>B e a C</strong>, mas não pertencem a <strong>A</strong>.</p>
+          <p class="definicao elementos_relacionados5" style="display: none;">Conjunto dos elementos que, simultaneamente, pertencem a <strong>A e a C</strong>, mas não pertencem a <strong>B</strong>.</p>
+          <p class="definicao elementos_relacionados6" style="display: none;">Conjunto dos elementos que, simultaneamente, pertencem a <strong>A, B e C</strong>. </p>
+
+          <p class="definicao elementos_relacionados7" style="display: none;">Conjunto universo (total).</strong></p>
+          <p class="definicao elementos_relacionados8" style="display: none;">Conjunto dos elementos que não pertencem a A, a B e a C.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12" align="left">
+          <div class="subtitulo">Um pouco mais sobre o Diagrama de Venn</div>
+          <p>As oito regiões distintas que definem o diagrama, conforme você viu anteriormente, podem ser combinadas de 256 (2<sup>8</sup>) maneiras diferentes e formar outros conjuntos. <strong style="color: #ff6961;">Caso queira entender este cálculo, <a style="color: #ff6961;" target="_blank" href="https://pt.wikipedia.org/wiki/Conjunto_de_partes">clique aqui</a>.</strong> Abaixo, apresentamos alguns deles a título de explicação.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container no-print" style="padding-top: 2%;">
+      <div class="row">
+        <div class="col-12 col-4"></div>
+        <div class="col-12 col-4">
+          <div id="carouselExampleIndicators4" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner ">
+              <div class="carousel-item active primeira" style="text-align: center;">
+                <img src="assets/arte03.png">
+              </div>
+              <div class="carousel-item" style="text-align: center;">
+                <img src="assets/arte03b.png">
+              </div>
+              <div class="carousel-item" style="text-align: center;">
+                <img src="assets/arte03c.png">
+              </div>
+              <div class="carousel-item" style="text-align: center;">
+                <img src="assets/arte03d.png">
+              </div>
+              <div class="carousel-item ultima" style="text-align: center;">
+                <img src="assets/arte03e.png">
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators4" role="button" data-slide="prev"><span class="botao30" style="display: none;" aria-hidden="true"><i style="font-size: 32px;" class="material-icons">chevron_left</i></span></a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators4" role="button" data-slide="next"><span class="botao40" aria-hidden="true"><i style="font-size: 32px;" class="material-icons">chevron_right</i></span></a>
+        </div>
+        <div class="col-12 col-lg-4"></div>
+      </div>
+    </div>
+    
+
+      <div class="container no-print" style="padding-top: 2%;">
+        <div class="texto um" align="center"><p><strong style="color: red;">1.</strong> Conjunto de todos os elementos que pertencem a A. Observe que reunimos quatro regiões para obtê-lo.</p></div>
+
+        <div style="display: none;" class="texto dois" align="center"><p><strong style="color: red;">2.</strong> Conjunto de todos os elementos que pertencem a B. Observe que reunimos quatro regiões para obtê-lo.</p></div>
+
+        <div style="display: none;" class="texto tres" align="center"><p><strong style="color: red;">3.</strong> Conjunto de todos os elementos que pertencem a C. Observe que reunimos quatro regiões para obtê-lo.</p></div>
+
+        <div style="display: none;" class="texto quatro" align="center"><p><strong style="color: red;">4.</strong> Conjunto de todos os elementos que pertencem à <strong>união</strong> dos conjunto <i>C-A-B e B-A-C</i>.</p></div>
+
+        <div style="display: none;" class="texto cinco" align="center"><p><strong style="color: red;">5.</strong> Conjunto de todos os elementos que pertencem à união dos conjuntos <i>A&cap;B&cap;C, A&cap;C e C−A−B.</i></p></div>
+      </div>
+  </section>
+
+  <section id="conteudo2">
+    <div class="container-fluid no-print" style="margin-top: 2%; margin-bottom: 3%;">
+      <div class="hr-middle">
+        <div class="quadrado">O DIAGRAMA DE VENN PARA RESOLVER PROBLEMAS</div>
+      </div>
+    </div>
+    <div class="container no-print" align="center">
+      <div class="row">
+        <div class="col-12">
+          <p>Veja a seguir como utilizar o Diagrama de Venn para resolver problemas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container no-print">
+      <ul class="accordion acc" style="padding-inline-start: 0;">
+        <li class="lista acc__card" style="list-style-type: none;">
+        <a class="toggle acc__title" href="javascript:void(0);"><strong>Problema 1 - A avaliação de Cálculo</a></strong>
+          <ul class="inner">
+            <div class="container no-print" style="padding-top: 2%;">
+              <div class="row">
+                <div class="col-12">
+                  <p>Sobre uma avaliação de Cálculo que continha 3 questões, sabe-se que:</p>
+                  <ul>
+                    <li>60 alunos acertaram as três questões.</li>
+                    <li>130 alunos acertaram a Questão 1 e a Questão 2.</li>
+                    <li>200 alunos acertaram a Questão 1 e a Questão 3.</li>
+                    <li>150 alunos acertaram a Questão 2 e a Questão 3.</li>
+                    <li>290 alunos acertaram a Questão 1.</li>
+                    <li>230 alunos acertaram a Questão 2.</li>
+                    <li>300 alunos acertaram a Questão 3.</li>
+                    <li>40 alunos não acertaram nenhuma questão.</li>
+                  </ul><br>
+                  <p><strong>Pergunta:</strong> Quantos alunos fizeram a prova?</p>
+                  <p><strong>Solução:</strong></p>
+                  <p>Observe que os alunos que acertaram a Questão 1 somam 290 alunos, mas destes já sabemos que 60 acertaram as três questões, 140 acertaram as questões 1 e 3 e 70 acertaram as questões 1 e 2. Assim, fazendo: 290 - 60 - 140 - 70 = 20. Logo, 20 alunos acertaram apenas a Questão 1.</p>
+                  <p>Pelo mesmo raciocínio, note: os alunos que acertaram a Questão 2 somam 230, destes 60 acertaram as três questões, 70 acertaram as questões 1 e 2 e 90 acertaram as questões 2 e 3. Assim, fazendo: 230 - 60 - 70 - 90 = 10. Logo, 10 alunos acertaram apenas a Questão 2.</p>
+                  <p>Por sua vez, os alunos que acertaram a Questão 3 somam 300 alunos, mas destes sabemos que 60 acertaram as três questões, 140 acertaram as questões 1 e 3 e 90 acertaram as questões 2 e 3. Assim, fazendo: 300 - 60 - 140 - 90 = 10. Logo, 10 alunos acertaram apenas a Questão 2.</p>
+                  <p>Fique atento que, 200 alunos acertaram as questões 1 e 3. Mas, destes 60 acertaram as três questões, logo, 200 - 60 = 140. Assim, 140 alunos acertaram apenas as questões 1 e 3.</p>
+                  <p>130 alunos acertaram as questões 1 e 2, destes 60 acertaram as três questões. Logo, 130 - 60 = 70. Assim, 70 alunos acertaram apenas as questões 1 e 2.</p>
+                  <p>150 alunos acertaram as questões 2 e 3, destes 60 acertaram as três questões. Logo, 150 - 60 = 90. Assim, 90 alunos acertaram apenas as questões 2 e 3.</p>
+                  <p>Agora então podemos completar o diagrama.</p>
+                </div>
+              </div>
+              <div class="row" align="center">
+                <div class="col-12">
+                  <img src="assets/arte04.png">
+                  <p style="padding-top: 2%;">Não acertaram nenhuma questão: 40</p>
+                </div>
+              </div>
+              <div class="row" align="left">
+                <div class="col-12">
+                  <p>Fazendo a soma: 20 + 140 + 10 + 70 + 60 + 90 + 10 + 40 = 440. Concluímos então que 440 alunos fizeram a prova de Cálculo.</p>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+      <ul class="accordion acc" style="padding-inline-start: 0;">
+        <li class="lista acc__card" style="list-style-type: none;">
+        <a class="toggle acc__title" href="javascript:void(0);"><strong>Problema 2 - O meio de transporte utilizado</a></strong>
+          <ul class="inner">
+            <div class="container" style="padding-top: 2%;">
+              <div class="row">
+                <div class="col-12">
+                  <p>Numa escola, foi feita uma pesquisa sobre o meio de transporte utilizado pelos alunos para ir à escola. Dos 300 alunos que responderam a pesquisa, concluiu-se que:</p>
+                  <ul>
+                    <li><sup>1</sup>&#8260;<sub>6</sub> dos alunos entrevistados utilizam ônibus e metrô.</li>
+                    <li><sup>1</sup>&#8260;<sub>4</sub> dos alunos entrevistados utilizam ônibus.</li>
+                    <li><sup>1</sup>&#8260;<sub>3</sub> dos alunos entrevistados utilizam metrô.</li>
+                  </ul><br>
+                  <p><strong>Pergunta:</strong>Quantos alunos não utilizam nenhum dos transportes (ônibus ou metrô)?</p>
+                  <p><strong>Solução:</strong></p>
+                  <p>Sabemos que <sup>1</sup>&#8260;<sub>4</sub> dos alunos utilizam ônibus, mas destes <sup>1</sup>&#8260;<sub>6</sub> utilizam ônibus e metrô. Assim, fazendo: <sup>1</sup>&#8260;<sub>4</sub> - <sup>1</sup>&#8260;<sub>6</sub> = <sup>2</sup>&#8260;<sub>24</sub> = <sup>1</sup>&#8260;<sub>12</sub>, obtemos que <sup>1</sup>&#8260;<sub>12</sub> dos entrevistados utilizam apenas ônibus.</p>
+ 
+                  <p><sup>1</sup>&#8260;<sub>3</sub> dos alunos utilizam metrô, mas destes <sup>1</sup>&#8260;<sub>6</sub> utilizam ônibus e metrô. Assim, fazendo: <sup>1</sup>&#8260;<sub>3</sub> - <sup>1</sup>&#8260;<sub>6</sub> = <sup>3</sup>&#8260;<sub>18</sub> = <sup>1</sup>&#8260;<sub>6</sub>, obtemos que <sup>1</sup>&#8260;<sub>6</sub> utilizam apenas metrô.</p>
+ 
+                  <p>Utilizando a representação por meio do Diagrama de Venn, obtemos:</p>
+                </div>
+              </div>
+              <div class="row" align="center">
+                <div class="col-12">
+                  <img src="assets/arte05.png">
+                  <p style="padding-top: 2%;">Não utilizam nenhum dos transportes (ônibus ou metrô).</p>
+                </div>
+              </div>
+              <div class="row" align="left">
+                <div class="col-12">
+                  <p>Queremos descobrir a quantidade de alunos entrevistados que não utilizam nenhum dos transportes. Para tanto, vamos representar essa fração por x. Sabemos que:</p>
+                  <p><sup>1</sup>&#8260;<sub>12</sub> + <sup>1</sup>&#8260;<sub>6</sub> + <sup>1</sup>&#8260;<sub>6</sub> + x = 1</p>
+                  <p>x = 1 - <sup>1</sup>&#8260;<sub>12</sub> - <sup>1</sup>&#8260;<sub>6</sub> - <sup>1</sup>&#8260;<sub>6</sub> = 1 - <sup>5</sup>&#8260;<sub>12</sub> = <sup>7</sup>&#8260;<sub>12</sub> </p>
+                  <p>Assim, <sup>7</sup>&#8260;<sub>12</sub> dos 300 entrevistados não utilizam nem ônibus nem metrô. Como temos: <sup>7</sup>&#8260;<sub>12</sub> de 300 igual a 175, concluímos que esta é a quantidade de alunos entrevistados que não utilizam nenhum dos transportes.</p>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+</section>
+<section id="conteudo3">
+  <div class="container-fluid" style="margin-top: 2%; margin-bottom: 3%;">
+      <div class="hr-middle">
+        <div class="quadrado print">FAÇA O SEU PRÓPRIO DIAGRAMA DE VENN</div>
+      </div>
+    </div>
+  <div class="container no-print" style="padding-top: 1%; padding-bottom: 1%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-2" align="center"></div>
+          <div class="col-12 col-lg-4 botao_escolha1" align="center">Diagrama com 2 conjuntos</div>
+          <div class="col-12 col-lg-4 botao_escolha2" align="center">Diagrama com 3 conjuntos</div>
+          <div class="col-12 col-lg-2" align="center"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="padding-top: 1%; padding-bottom: 1%;">
+      <div class="container 2conjuntos print" style="display: none;">
+        <div class="row" align="center" style="border:2px solid black; z-index: 100;">
+          <div class="col-12 col-lg-2" align="center"></div>
+          <div class="col-12 col-lg-8">
+            <input placeholder="Digite o nome do conj. A" type="" name="" class="espaco digite1">
+            <input placeholder="Digite aqui" type="" name="" class="espaco digite2">
+            <input placeholder="Digite o nome do conj. B" type="" name="" class="espaco digite3">
+            <input placeholder="Digite o nome do conj. C" type="" name="" class="espaco digite4">
+              <div class="instrucoes" style="position: relative;">
+            <img src="assets/arte_interativa.png" class="imagem1">
+            <div class="instrucao1 instrucao">
+              <input type="" name="" class="espaco2 digite5">
+            </div>
+            <div class="instrucao2 instrucao">
+              <input type="" name="" class="espaco2 digite6">
+            </div>
+            <div class="instrucao3 instrucao">
+              <input type="" name="" class="espaco2 digite7">
+            </div>
+            <div class="instrucao4 instrucao">
+              <input type="" name="" class="espaco2 digite8">
+            </div>
+            <div class="instrucao5 instrucao">
+              <input type="" name="" class="espaco2 digite9">
+            </div>
+            <div class="instrucao6 instrucao">
+              <input type="" name="" class="espaco2 digite10">
+            </div>
+            <div class="instrucao7 instrucao">
+              <input type="" name="" class="espaco2 digite11">
+            </div>
+          </div>
+          </div>
+          <div class="col-12 col-lg-2" align="center"></div>
+        </div>
+      </div>
+
+      <div class="container print 3conjuntos">
+        <div class="row" align="center" style="border:2px solid black; z-index: 100;">
+          <div class="col-12 col-lg-2" align="center"></div>
+          <div class="col-12 col-lg-8">
+            <input placeholder="Digite o nome do conj. A" type="" name="" class="espaco digite1b">
+            <input placeholder="Digite aqui" type="" name="" class="espaco digite2b">
+            <input placeholder="Digite o nome do conj. B" type="" name="" class="espaco digite3b">
+              <div class="instrucoes" style="position: relative;">
+            <img src="assets/arte_interativab.png" class="imagem3">
+            <div class="instrucao1 instrucao">
+              <input type="" name="" class="espaco2 digite12">
+            </div>
+            <div class="instrucao2 instrucao">
+              <input type="" name="" class="espaco2 digite13">
+            </div>
+            <div class="instrucao3 instrucao">
+              <input type="" name="" class="espaco2 digite14">
+            </div>
+          </div>
+          </div>
+          <div class="col-12 col-lg-2" align="center"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container no-print">
+        <div class="row">
+          <div class="col-12">
+            <div class="botao_respostas2 no-print">Imprimir</div>
+          </div>
+        </div>
+      </div>
+</section>
+<section id="conteudo4">
+  <div class="container-fluid no-print" style="margin-top: 2%;">
+    <div class="hr-middle">
+      <div class="quadrado">CURIOSIDADE: COMO SERIA UM DIAGRAMA DE VENN PARA 5 CONJUNTOS?</div>
+    </div>
+  </div>
+  <div class="container no-print" style="margin-top: 2%; margin-bottom: 3%;">
+    <div class="row">
+      <div class="col-12">
+        <p>As aplicações do Diagrama de Venn não se restringem aos casos com dois ou três conjuntos. Para problemas mais complexos, pode-se utilizar até mesmo 5 conjuntos. Veja abaixo uma forma de representar um Diagrama de Venn com 4 e 5 conjuntos, respectivamente.</p>
+      </div>
+    </div>
+    <div class="row" align="center">
+      <div class="col-12 col-lg-6" style="padding-bottom: 5%; padding-top: 2%;">
+        <img src="assets/arte06.png">
+      </div>
+      <div class="col-12 col-lg-6" style="padding-bottom: 2%;">
+        <img src="assets/arte07.png">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-12" align="center" style="padding-top: 2%;">
+        <p>Duas formas diferentes para representar o Diagrama de Venn com <strong>4 conjuntos</strong>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 2%;">
+        <img src="assets/arte08.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 2%;">
+        <p>Diagrama de Venn com <strong>5 conjuntos</strong>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="left">
+        <div class="subtitulo">Caso queira, responda a este <i>quiz</i> para consolidar sua aprendizagem sobre o Diagrama</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 2%;">
+        <img src="assets/arte09.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="left" style="padding-top: 2%; padding-bottom: 2%;">
+        <p>Localize no Diagrama de Venn:</p>
+        <p>Exemplo, você se encontra apenas no conjunto dos que estiveram na Terra, mas sem interseção com nenhum outro grupo - (a menos que você seja um astronauta!):</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 2%;">
+        <img src="assets/arte10.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="left" style="padding-top: 2%;">
+        <ul style="list-style: none;">
+          <li>A) Yuri Gagarin, cosmonauta russo, foi o primeiro homem a ir ao espaço.</li>
+          <li>B) Neil Armstrong foi um dos primeiros homens a pisar em solo lunar.</li>
+          <li>C) A Mars Pathfinder foi a primeira “rover” a pousar em Marte, em 1993.</li>
+          <li>D) A sonda Voyager 1 foi a primeira construção humana a atingir o espaço exterior ao nosso sistema solar.</li>
+          <li>E) Cometa Halley passou perto da Terra, pela última vez, em 1986.</li>
+        </ul>
+        <div class="botao_respostas">Ver respostas</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="conteudo5" style="display: none;">
+  <div class="container no-print" style="margin-top: 2%; margin-bottom: 3%;">
+    <div class="row">
+      <div class="col-12" align="center">
+        <img src="assets/arte11.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 10%;">
+        <img src="assets/arte12.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 10%;">
+        <img src="assets/arte13.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 10%;">
+        <img src="assets/arte14.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" align="center" style="padding-top: 10%;">
+        <img src="assets/arte15.png">
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container no-print">
+    <div class="row">
+      <div class="col-12">
+        <p><strong>Referência bibliográfica:</strong></p>
+        <p>OBMEP. Diagrama de Venn: problemas de raciocínio lógico. Disponível em: <a target="_blank" href="http://clubes.obmep.org.br/blog/diagrama-de-venn-problemas-de-raciocinio-logico/">http://clubes.obmep.org.br/blog/diagrama-de-venn-problemas-de-raciocinio-logico/</a>. Acesso em: 18 dez. 2020.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- RODAPÉ -->
+  <!--//////////////////////////////////////////////////////
+  Classes prontas p/ footer (podem ser combinadas):
+  padrão => texto e contornos em cinza
+  class = "black" => texto e contornos em preto
+  class = "negativo" => texto e contornos em branco, sobre fundo escuro
+  class = "transparente" => fundo transparente (necessário ajustar cor dos ícones de compartilhamento nos círculos, para bater com a cor de fundo)
+  /////////////////////////////////////////////////////////-->
+  <!-- <footer class="black"> -->
+  <!-- <footer class="negativo"> -->
+  <!-- <footer class="transparente"> -->
+  <!-- <footer class="transparente black"> -->
+  <!-- <footer class="transparente negativo"> -->
+  <footer class="no-print">
+    <div class="container d-flex justify-content-between">
+
+      <div class="cred-rea">
+        <!-- Comente em caso de adaptação do REA -->
+          <div>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
+          Você pode utilizá-lo, compartilhá-lo e modificá-lo.</div>
+          <div><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></div>
+          <div>Compartilhe: <div class="sharing"></div></div>
+
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+      <!-- FORMULÁRIOS DE AVALIAÇÃO -->
+      <div class="aval-rea d-flex">
+        <!-- AVALIAR RECURSO -->
+        <!-- Atualizar "Nome+do+Recurso" -->
+        <a class="btn btn-secondary" href="https://forms.office.com/r/KcJTJcKDCc" target="_blank">Avaliar este recurso</a>
+        <!-- REPORTAR ERRO -->
+        <!-- Atualizar "O+Diagrama+de+Venn" -->
+        <a class="btn btn-secondary" href="https://forms.office.com/r/BU3heRJ9ZP" target="_blank">Reportar erro</a>
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Coordenação</span>Cristian Degasperii Guilhen</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span> Andressa Rubim e Thiago Nagafuchi</p>
+          <p><span class="funcao">Ilustração</span>Francesco Felippe Micieli</p>
+          <p><span class="funcao">Layout</span>Natasha Abe Higa</p>
+          <p><span class="funcao">Programação</span>Celso de Oliveira</p>
+          <p><span class="funcao">Revisão</span>Valteir Benedito Vaz</p>
+
+        </div>
+        <div class="modal-footer">
+          <p>Janeiro/2021</p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [
+        {
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="javascripts/events.js"></script>
+
+  <!-- MathJax. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>
